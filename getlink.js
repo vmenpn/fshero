@@ -52,10 +52,8 @@ async function getCookieCsrf() {
   }
   loop = true;
   const browser = await puppeteer.launch({
-    'args' : [
-      '--no-sandbox',
-      '--disable-setuid-sandbox'
-    ]
+    headless: true,
+    args: ['--no-sandbox','--disable-setuid-sandbox']
   });
   const page = await browser.newPage();
   await page.goto('https://www.fshare.vn/site/login');
