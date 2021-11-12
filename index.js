@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const getLink = require('./getlink');
-require('dotenv').config()
-const port = process.env.PORT ||8080 ;
+require('dotenv').config();
+const port = process.env.PORT || 80 ;
 
 getLink.getCookieCsrf().then(() => {
   app.set('view engine', 'ejs');
