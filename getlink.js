@@ -76,6 +76,7 @@ async function getCookieCsrf() {
   csrf = csrfDownload;
   console.log(`cookie: ${cookie} | csrf: ${csrf}`);
   page.close();
+   await browser.close();
   return;
 }
 
